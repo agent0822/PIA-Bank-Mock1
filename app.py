@@ -12,6 +12,20 @@ from datetime import datetime, timedelta
 from http.cookies import SimpleCookie
 from urllib.parse import parse_qs
 from wsgiref.simple_server import make_server
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Home route
+@app.route("/")
+def home():
+    return "Welcome! Your app is running."
+
+@app.route("/balances")
+def balances():
+    # example: pull balances from DB and return
+    return "Here are the balances"
+
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
