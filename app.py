@@ -1,3 +1,4 @@
+
 import hashlib
 import html
 import math
@@ -5,6 +6,8 @@ import mimetypes
 import os
 import secrets
 import sqlite3
+from flask import Flask
+app = Flask(__name__)
 from datetime import datetime, timedelta
 from http.cookies import SimpleCookie
 from urllib.parse import parse_qs
